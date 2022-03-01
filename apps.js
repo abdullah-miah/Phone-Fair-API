@@ -2,20 +2,19 @@
 const searchphone = ()=>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
+    // searchField clear
     searchField.value ='';
+    // searchField error message
     if(searchText ==''){
       document.getElementById('valid-number').style.display='block';
-      
     }else{
       const url =`https://openapi.programming-hero.com/api/phones?search=${searchText}`;
       fetch(url)
       .then(res => res.json())
       .then(data =>displaysearchResult(data.data));
-    }
-    
-    
-    // console.log(searchText);    
+    }   
 };
+// displaysearchResult in array
 const displaysearchResult = phones =>{
    const searchResult = document.getElementById('search-result');
   //  clear display data
@@ -23,6 +22,7 @@ const displaysearchResult = phones =>{
   if(phones.length == 0){
     document.getElementById('no-result').style.display='block';
   }
+  // Twenty phone slice
    phones.slice(0,20).forEach(phone => {
        const div = document.createElement('div');
        div.classList.add('col');
@@ -41,8 +41,9 @@ const displaysearchResult = phones =>{
        searchResult.appendChild(div);
    });
 };
+// loadPhoneDetails in UI
 const loadPhoneDetails = phoneId =>{
-    // console.log(phoneId);
+    // phone detail fetch
     const url =` https://openapi.programming-hero.com/api/phone/${phoneId}`;
     fetch(url)
     .then(res => res.json())
@@ -52,6 +53,7 @@ const displayPhoneDetail = phone=>{
     const phoneDetails = document.getElementById('phone-details');
   //  old phone details remove
     phoneDetails.textContent ='';
+    // crate Element in UI
     const div = document.createElement('div');
     div.classList.add('card');
     div.innerHTML=`
@@ -67,15 +69,21 @@ const displayPhoneDetail = phone=>{
       <li class="list-group-item text-center">Sensors:  
       ${phone.mainFeatures.sensors[0]}, 
       ${phone.mainFeatures.sensors[1]},
-      ${phone.mainFeatures.sensors[2]}
+      ${phone.mainFeatures.sensors[2]},
       ${phone.mainFeatures.sensors[3]}
       </li>
-      <li class="list-group-item text-center">Others :${phone.others.WLAN}</li>
+      <li class="list-group-item text-center">Others :
+      ${phone.others.WLAN}, 
+      ${phone.others.Bluetooth}, 
+      ${phone.others.GPS}, 
+      ${phone.others.Radio}, 
+      ${phone.others.USB}, 
+      </li>
     </ul>
     <div class="card-body w-25 mx-auto">
     <button type="button" class="btn btn-success">Buy Now</button>
-
     </div>
     `;
     phoneDetails.appendChild(div);
+    
 }

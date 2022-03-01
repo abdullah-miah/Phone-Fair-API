@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Fair</title>
+    <!-- bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css link -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="bg-color">
   <div class="containar">
-    <h1 class="text-center text-success mb-3">Phone Fair
+    <!-- website title -->
+    <h1 class="text-center text-success mb-3">Biggest Phone Fair
     </h1>
-    <div class="input-group mb-3 w-25 m-auto mb-3">
+    <!-- input field -->
+    <div class="input-group mb-3 w-50 m-auto mb-3">
       <input id="search-field" type="text" class="form-control" placeholder="Search phone" aria-label="Recipient's username" aria-describedby="button-addon2">
       <button onclick="searchphone()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
     </div>
@@ -31,17 +35,15 @@
       
     </div>
    </div>
-
   <!-- search result -->
     <div class="container">
       <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
-    
+     
       </div>
     </div>
-    
-     
+     <!-- bootstrap js link -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="apps.js"></script>
+  <!-- apps js link  -->
+  <script src="apps.js"></script>
 </body>
-
 </html>

@@ -1,7 +1,10 @@
-/* css style */
+/* some css style */
 #no-result{
     display: none;
 }
 #valid-number{
+    display: none;
+}
+#others-display{
     display: none;
 }
