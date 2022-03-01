@@ -23,8 +23,7 @@ const displaysearchResult = phones =>{
   if(phones.length == 0){
     document.getElementById('no-result').style.display='block';
   }
-   phones.forEach(phone => {
-    //    console.log(phone);
+   phones.slice(0,20).forEach(phone => {
        const div = document.createElement('div');
        div.classList.add('col');
        div.innerHTML=`
