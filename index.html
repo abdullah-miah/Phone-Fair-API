@@ -12,12 +12,18 @@
 
 <body>
   <div class="containar">
-    <h1 class="text-center mb-3">Phone Fair
+    <h1 class="text-center text-success mb-3">Phone Fair
     </h1>
     <div class="input-group mb-3 w-25 m-auto mb-3">
       <input id="search-field" type="text" class="form-control" placeholder="Search phone" aria-label="Recipient's username" aria-describedby="button-addon2">
       <button onclick="searchphone()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
     </div>
+  </div>
+  <div id="no-result" class="container">
+    <h1 class=" text-center text-danger"> !!! No result found </h1>
+  </div>
+  <div id="valid-number" class="container">
+    <h1 class=" text-center text-danger"> !!! Please input a valid items </h1>
   </div>
   <!-- phone details -->
    <div class="container">
