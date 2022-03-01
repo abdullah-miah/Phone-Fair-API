@@ -43,7 +43,7 @@ const displaysearchResult = phones =>{
 };
 // loadPhoneDetails in UI
 const loadPhoneDetails = phoneId =>{
-    // phone detail fetch
+    // phone detail fetch link
     const url =` https://openapi.programming-hero.com/api/phone/${phoneId}`;
     fetch(url)
     .then(res => res.json())
